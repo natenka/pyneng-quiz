@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "pyneng-quiz"
 version = "0.1.0"
-description = "CLI tool to run tests in pyneng book/course"
+description = "CLI tool to run quiz in pyneng book/course"
 readme = "README.md"
 authors = [{ name = "Natasha Samoylenko", email = "natasha.samoylenko@gmail.com" }]
 classifiers = [
@@ -24,6 +24,6 @@ requires-python = ">=3.7"
 Homepage = "https://github.com/natenka/pyneng-quiz"
 
 [project.scripts]
-pynengq = "pyneng_quiz.termquiz:cli"
+pynengq = "pyneng_quiz.termquiz:main"
 
 [project.entry-points]
