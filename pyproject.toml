@@ -16,7 +16,8 @@ classifiers = [
 ]
 keywords = ["cli", "tutorial"]
 dependencies = [
-	"Click",
+	"textual == 0.1.18",
+    "rich"
 ]
 requires-python = ">=3.7"
 
