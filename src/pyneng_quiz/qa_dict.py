@@ -1,5 +1,5 @@
 all_questions = {
-    "Строки": [
+    "04 Строки": [
         {
             "description": "Какое значение будет у переменной result в последней строке?",
             "code": "string = 'interface'\nresult = string[3]",
@@ -54,9 +54,9 @@ all_questions = {
             "multiple_choices": False,
         },
     ],
-    "Списки": [
+    "04 Списки": [
     ],
-    "Строки и списки": [
+    "04 Строки и списки": [
         {
             "description": "Какое значение будет у переменной result в последней строке?",
             "code": "string = 'FastEthernet0/1    10.1.1.1  255.255.255.0'\nresult = string.split()[-2]",
@@ -100,7 +100,7 @@ all_questions = {
             "multiple_choices": False,
         },
     ],
-    "Словари": [
+    "04 Словари": [
         {
             "description": "Какое значение будет у переменной result в последней строке?",
             "code": "result = {}\nresult[1] = 100\nresult[1] = 200",
@@ -116,7 +116,7 @@ all_questions = {
             "multiple_choices": False,
         },
     ],
-    "Типы данных и функции преобразования типов": [
+    "04 Типы данных и функции преобразования типов": [
         {
             "description": "Какое значение будет у переменной result в последней строке?",
             "code": "item = '101'\nresult = int(item, 2)",
@@ -191,7 +191,7 @@ all_questions = {
             "multiple_choices": False,
         },
     ],
-    "06_control_structures": [
+    "06 06_control_structures": [
         {
             "description": "06_control_structures",
             "code": "string = 'interface'\nresult = string[::2]",
@@ -207,7 +207,7 @@ all_questions = {
             "multiple_choices": False,
         },
     ],
-    "Функции": [
+    "09 Функции": [
         {
             "description": "09_functions",
             "code": "string = 'interface'\nresult = string[::2]",
@@ -218,107 +218,6 @@ all_questions = {
                 "4": "'itrae'",
                 "5": "'nefc'",
                 "6": "'in'",
-            },
-            "correct_answer": "4",
-            "multiple_choices": False,
-        },
-    ],
-    "Регулярные выражения": [
-        {
-            "description": "15_module_re",
-            "code": "string = 'interface'\nresult = string[::2]",
-            "answers": {
-                "1": "Ошибка",
-                "2": "''",
-                "3": "'interface'",
-                "4": "'itrae'",
-                "5": "'nefc'",
-                "6": "'in'",
-            },
-            "correct_answer": ["1", "4"],
-            "multiple_choices": True,
-        },
-    ],
-    "5_topic": [
-        {
-            "description": "5 15_module_re",
-            "code": "string = 'interface'\nresult = string[::2]",
-            "answers": {
-                "1": "Ошибка",
-                "2": "''",
-            },
-            "correct_answer": "4",
-            "multiple_choices": False,
-        },
-    ],
-    "6 topic": [
-        {
-            "description": "6 15_module_re",
-            "code": "string = 'interface'\nresult = string[::2]",
-            "answers": {
-                "5": "'nefc'",
-                "6": "'in'",
-            },
-            "correct_answer": "4",
-            "multiple_choices": False,
-        },
-    ],
-    "7 topic": [
-        {
-            "description": "7 15_module_re",
-            "code": "string = 'interface'\nresult = string[::2]",
-            "answers": {
-                "1": "Ошибка",
-                "5": "'nefc'",
-                "6": "'in'",
-            },
-            "correct_answer": "4",
-            "multiple_choices": False,
-        },
-    ],
-    "8 topic": [
-        {
-            "description": "8 15_module_re",
-            "code": "string = 'interface'\nresult = string[::2]",
-            "answers": {
-                "1": "Ошибка",
-                "2": "''",
-            },
-            "correct_answer": "4",
-            "multiple_choices": False,
-        },
-    ],
-    "9 topic": [
-        {
-            "description": "9 15_module_re",
-            "code": "string = 'interface'\nresult = string[::2]",
-            "answers": {
-                "1": "Ошибка",
-                "2": "''",
-            },
-            "correct_answer": "4",
-            "multiple_choices": False,
-        },
-    ],
-    "10 topic": [
-        {
-            "description": "10 15_module_re",
-            "code": "string = 'interface'\nresult = string[::2]",
-            "answers": {
-                "1": "Ошибка",
-                "2": "''",
-            },
-            "correct_answer": "4",
-            "multiple_choices": False,
-        },
-    ],
-    "11 topic": [
-        {
-            "description": "11 15_module_re",
-            "code": "string = 'interface'\nresult = string[::2]",
-            "answers": {
-                "1": "Ошибка",
-                "2": "''",
             },
             "correct_answer": "4",
             "multiple_choices": False,
