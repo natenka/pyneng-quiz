@@ -2,6 +2,6 @@ from importlib import resources
 import json
 
 
-__version__ = "0.1.0"
+__version__ = "0.3.0"
 
-ALL_QUESTIONS = json.loads(resources.read_text("pyneng", "questions.json"))
+ALL_QUESTIONS = json.loads(resources.read_text("pyneng_quiz", "questions.json"))
