@@ -6,21 +6,19 @@ from question_table_widget import QuestionTable
 from help_table_widget import HelpTable
 from select_questions_widget import SelectQuestionTable
 from qa_dict import all_questions
-
-
-ALL_QA = all_questions
+from pyneng_quiz import ALL_QUESTIONS
 
 
 class TermQuiz(App):
     async def on_load(self, event):
-        self.all_topics = ALL_QA
+        self.all_topics = ALL_QUESTIONS
         self.current_topic = None
         self.current_topic_questions = None
         self.digits_key = ""
 
     async def on_mount(self) -> None:
         await self.bind("ctrl+q", "quit", "quit")
-        self.topics_table = SelectQuestionTable(ALL_QA)
+        self.topics_table = SelectQuestionTable(ALL_QUESTIONS)
         await self.view.dock(self.topics_table)
 
     async def on_key(self, event):

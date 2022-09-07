@@ -54,8 +54,6 @@ all_questions = {
             "multiple_choices": False,
         },
     ],
-    "04 Списки": [
-    ],
     "04 Строки и списки": [
         {
             "description": "Какое значение будет у переменной result в последней строке?",
@@ -191,40 +189,5 @@ all_questions = {
             "multiple_choices": False,
         },
     ],
-    "06 06_control_structures": [
-        {
-            "description": "06_control_structures",
-            "code": "string = 'interface'\nresult = string[::2]",
-            "answers": {
-                "1": "Ошибка",
-                "2": "''",
-                "3": "'interface'",
-                "4": "'itrae'",
-                "5": "'nefc'",
-                "6": "'in'",
-            },
-            "correct_answer": "4",
-            "multiple_choices": False,
-        },
-    ],
-    "09 Функции": [
-        {
-            "description": "09_functions",
-            "code": "string = 'interface'\nresult = string[::2]",
-            "answers": {
-                "1": "Ошибка",
-                "2": "''",
-                "3": "'interface'",
-                "4": "'itrae'",
-                "5": "'nefc'",
-                "6": "'in'",
-            },
-            "correct_answer": "4",
-            "multiple_choices": False,
-        },
-    ],
 }
 
-# number_chapter_map = {
-#     4: "04_data_structures",
-# }
