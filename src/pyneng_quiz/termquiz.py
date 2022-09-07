@@ -2,10 +2,10 @@ import os
 
 from textual.app import App
 
-from question_table_widget import QuestionTable
-from help_table_widget import HelpTable
-from select_questions_widget import SelectQuestionTable
-from qa_dict import all_questions
+from pyneng_quiz.question_table_widget import QuestionTable
+from pyneng_quiz.help_table_widget import HelpTable
+from pyneng_quiz.select_questions_widget import SelectQuestionTable
+from pyneng_quiz.qa_dict import all_questions
 from pyneng_quiz import ALL_QUESTIONS
 
 
