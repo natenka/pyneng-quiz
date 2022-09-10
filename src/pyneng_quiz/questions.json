@@ -98,6 +98,147 @@
       "multiple_choices": false
     }
   ],
+  "04 Списки": [
+    {
+      "description": "Выберите все варианты в которых переменная result будет равна 25",
+      "code": "data = [\n    [11, 12, 13, 14, 15, 16],\n    [21, 22, 23, 24, 25, 26],\n    [31, 32, 33, 34, 35, 36]\n]",
+      "answers": {
+        "1": "result = data[-2][4]",
+        "2": "result = data[1][-2]",
+        "3": "result = data[4][1]",
+        "4": "result = data[4][-2]",
+        "5": "result = data[-2][-2]",
+        "6": "result = data[1][4]"
+      },
+      "correct_answer": ["1", "2", "5", "6"],
+      "multiple_choices": true
+    },
+    {
+      "description": "Выберите все варианты в которых переменная result будет равна 3",
+      "code": "data = [1, 2, 3, 4, 5, 6]",
+      "answers": {
+        "1": "result = data[2]",
+        "2": "result = data[3]",
+        "3": "result = data[-4]",
+        "4": "result = data[-3]",
+        "5": "result = data.pop(2)",
+        "6": "result = data.pop(-4)",
+        "7": "result = data.pop(3)",
+        "8": "result = data.remove(3)",
+        "9": "result = data.remove(2)"
+      },
+      "correct_answer": ["1", "3", "5", "6"],
+      "multiple_choices": true
+    },
+    {
+      "description": "В каком выражении итоговый список result будет состоять из элементов list1 и list2?",
+      "code": "list1 = [1, 2, 3]\nlist2 = [4, 5, 6]",
+      "answers": {
+        "1": "result = list1 + list2",
+        "2": "result = list1.append(list2)",
+        "3": "result = list1.extend(list2)"
+      },
+      "correct_answer": ["1"],
+      "multiple_choices": true
+    }
+  ],
+  "04 Словари": [
+    {
+      "description": "Что выведет последняя строка?",
+      "code": "d1 = d2 = {1: 100, 2: 200, 3: 300}\nd1[4] = 400\nprint(d2[4])",
+      "answers": {
+        "1": "Исключение KeyError",
+        "2": "300",
+        "3": "400"
+      },
+      "correct_answer": "3",
+      "multiple_choices": false
+    },
+    {
+      "description": "Выберите все варианты в которых переменная result будет равна 200",
+      "code": "data = {4: 400, 1: 100, 2: 200, 3: 300}",
+      "answers": {
+        "1": "result = data[2]",
+        "2": "result = data[-2]",
+        "3": "result = data.get(2)",
+        "4": "result = data.get(5, 200)",
+        "5": "result = data.setdefault(2)",
+        "6": "result = data.setdefault(20, 200)",
+        "7": "result = data.setdefault(200)",
+        "8": "result = data.get(200)",
+        "9": "result = data[200]"
+      },
+      "correct_answer": ["1", "3", "4", "5", "6"],
+      "multiple_choices": true
+    }
+  ],
+  "04 Форматирование строк": [
+    {
+      "description": "Какой вывод будет в последней строке?",
+      "code": "template = 'Result: {} {}'\nprint(f.format(100, 2))",
+      "answers": {
+        "1": "Ошибка",
+        "2": "Result: 100 2",
+        "3": "Result:",
+        "4": "Result: {} {}",
+        "5": "Result: '100' '2'"
+      },
+      "correct_answer": "2",
+      "multiple_choices": false
+    },
+    {
+      "description": "Какой вывод будет в последней строке?",
+      "code": "template = 'Result: {} {}'\nprint(f.format(100, 'test'))",
+      "answers": {
+        "1": "Ошибка",
+        "2": "Result: 100 'test'",
+        "3": "Result:",
+        "4": "Result: {} {}",
+        "5": "Result: 100 test"
+      },
+      "correct_answer": "5",
+      "multiple_choices": false
+    },
+    {
+      "description": "Какой вывод будет в последней строке?",
+      "code": "template = 'Result: {:b} {}'\nprint(f.format(8, 2))",
+      "answers": {
+        "1": "Ошибка",
+        "2": "Result: 8 2",
+        "3": "Result:",
+        "4": "Result: 1000 2",
+        "5": "Result: 0b1000 2"
+      },
+      "correct_answer": "4",
+      "multiple_choices": false
+    },
+    {
+      "description": "Какой вывод будет в последней строке?",
+      "code": "template = 'Result: {:b} {:b}'\nprint(f.format(8, 2))",
+      "answers": {
+        "1": "Ошибка",
+        "2": "Result: 8 2",
+        "3": "Result: 1000 10",
+        "4": "Result:",
+        "5": "Result: 0b1000 0b10"
+      },
+      "correct_answer": "3",
+      "multiple_choices": false
+    },
+    {
+      "description": "Какой вывод будет в последней строке?",
+      "code": "template = 'Result: {:08b} {:08b}'\nprint(f.format(8, 2))",
+      "answers": {
+        "1": "Ошибка",
+        "2": "Result: 08 02",
+        "3": "Result: 1000 10",
+        "4": "Result:",
+        "5": "Result: 00001000 00000010"
+      },
+      "correct_answer": "5",
+      "multiple_choices": false
+    }
+  ],
   "04 Типы данных и функции преобразования типов": [
     {
       "description": "Какое значение будет у переменной result в последней строке?",
