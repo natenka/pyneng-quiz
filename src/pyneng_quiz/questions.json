@@ -175,7 +175,7 @@
   "04 Форматирование строк": [
     {
       "description": "Какой вывод будет в последней строке?",
-      "code": "template = 'Result: {} {}'\nprint(f.format(100, 2))",
+      "code": "template = 'Result: {} {}'\nprint(template.format(100, 2))",
       "answers": {
         "1": "Ошибка",
         "2": "Result: 100 2",
@@ -188,7 +188,7 @@
     },
     {
       "description": "Какой вывод будет в последней строке?",
-      "code": "template = 'Result: {} {}'\nprint(f.format(100, 'test'))",
+      "code": "template = 'Result: {} {}'\nprint(template.format(100, 'test'))",
       "answers": {
         "1": "Ошибка",
         "2": "Result: 100 'test'",
@@ -201,7 +201,7 @@
     },
     {
       "description": "Какой вывод будет в последней строке?",
-      "code": "template = 'Result: {:b} {}'\nprint(f.format(8, 2))",
+      "code": "template = 'Result: {:b} {}'\nprint(template.format(8, 2))",
       "answers": {
         "1": "Ошибка",
         "2": "Result: 8 2",
@@ -214,7 +214,7 @@
     },
     {
       "description": "Какой вывод будет в последней строке?",
-      "code": "template = 'Result: {:b} {:b}'\nprint(f.format(8, 2))",
+      "code": "template = 'Result: {:b} {:b}'\nprint(template.format(8, 2))",
       "answers": {
         "1": "Ошибка",
         "2": "Result: 8 2",
@@ -227,7 +227,7 @@
     },
     {
       "description": "Какой вывод будет в последней строке?",
-      "code": "template = 'Result: {:08b} {:08b}'\nprint(f.format(8, 2))",
+      "code": "template = 'Result: {:08b} {:08b}'\nprint(template.format(8, 2))",
       "answers": {
         "1": "Ошибка",
         "2": "Result: 08 02",
