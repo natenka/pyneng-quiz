@@ -508,6 +508,33 @@
       },
       "correct_answer": "4",
       "multiple_choices": false
+    },
+    {
+      "description": "Что будет выведено на стандартный поток вывода? (значения, которые выводятся на разных строках, разделены запятой)",
+      "code": "user = 'admin'\npasswd = 'admin12'\n\nif len(passwd) <= 8:\n    print('Пароль слишком короткий')\nif user in passwd:\n    print('Пароль содержит имя пользователя')\nelse:\n    print('Пароль для пользователя установлен')\n",
+      "answers": {
+        "1": "Пароль слишком короткий",
+        "2": "Пароль содержит имя пользователя",
+        "3": "Пароль слишком короткий, Пароль содержит имя пользователя",
+        "4": "Пароль для пользователя установлен"
+      },
+      "correct_answer": "3",
+      "multiple_choices": false
+    },
+    {
+      "description": "Какой код сгенерирует такой вывод?",
+      "code": "2\n4\n6\n8\n10",
+      "answers": {
+        "1": "for i in range(2, 11, 2):\n    print(i)",
+        "2": "for i in range(1, 10, 2):\n    print(i)",
+        "3": "for i in range(10):\n    if i % 2 == 0:\n        print(i)",
+        "4": "for i in range(1, 11):\n    if i % 2 == 0:\n        print(i)",
+        "5": "for i in range(10):\n    if i in [2, 4, 6, 8, 10]:\n        print(i)",
+        "6": "for i in range(20):\n    if i in [2, 4, 6, 8, 10]:\n        print(i)"
+      },
+      "code_in_answer": true,
+      "correct_answer": ["1", "4", "6"],
+      "multiple_choices": true
     }
   ]
 }
