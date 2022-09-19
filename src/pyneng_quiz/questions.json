@@ -465,7 +465,7 @@
       "multiple_choices": false
     }
   ],
-  "06 Контроль хода программы": [
+  "06 Контроль хода программы (условия)": [
     {
       "description": "Какое значение выведет последняя строка?",
       "code": "value = 55\n\nif 0 < value < 33:\n    value = 50\n    value += 1\nif 33 < value < 100:\n    value = 57\n    value -= 5\nif value > 30:\n    value += 100\nelse:\n    value = 8\n\nprint(value)",
@@ -520,7 +520,51 @@
       },
       "correct_answer": "3",
       "multiple_choices": false
+    }
+  ],
+  "06 Контроль хода программы (try/except)": [
+    {
+      "description": "Что будет выведено на стандартный поток вывода? (значения, которые выводятся на разных строках, разделены запятой)",
+      "code": "num = 'a'\n\ntry:\n    hexnum = int(num, 16)\nexcept ValueError:\n    print('Error')\nelse:\n    print(hexnum)",
+      "answers": {
+        "1": "10",
+        "2": "a",
+        "3": "Error",
+        "4": "10, Error",
+        "5": "ValueError: invalid literal for int() with base 10: 'a'"
+      },
+      "correct_answer": "1",
+      "multiple_choices": false
     },
+    {
+      "description": "Что будет выведено на стандартный поток вывода? (значения, которые выводятся на разных строках, разделены запятой)",
+      "code": "num = 'a'\n\ntry:\n    integer = int(num)\nexcept ValueError:\n    try:\n        hexnum = int(num, 16)\n    except ValueError:\n        print('Error')\n    else:\n        print(hexnum)\nelse:\n    print(integer)",
+      "answers": {
+        "1": "a",
+        "2": "Error",
+        "3": "10, Error",
+        "4": "10",
+        "5": "ValueError: invalid literal for int() with base 10: 'a'"
+      },
+      "correct_answer": "4",
+      "multiple_choices": false
+    },
+    {
+      "description": "Что будет выведено на стандартный поток вывода? (значения, которые выводятся на разных строках, разделены запятой)",
+      "code": "num = '10'\n\ntry:\n    integer = int(num)\n    print(integer * 10)\nexcept ValueError:\n    print('Error')\nelse:\n    print(integer)",
+      "answers": {
+        "1": "10",
+        "2": "100, 10",
+        "3": "Error",
+        "4": "100",
+        "5": "100, Error, 10",
+        "6": "100, Error, 100"
+      },
+      "correct_answer": "2",
+      "multiple_choices": false
+    }
+  ],
+  "06 Контроль хода программы (циклы)": [
     {
       "description": "Какой код сгенерирует такой вывод?",
       "code": "2\n4\n6\n8\n10",
@@ -535,6 +579,175 @@
       "code_in_answer": true,
       "correct_answer": ["1", "4", "6"],
       "multiple_choices": true
+    },
+    {
+      "description": "Какой список будет в переменной result в последней строке?",
+      "code": "data = ['20', '30', '40', 'vlan', 'test']\nresult = []\nfor item in data:\n    if item.isdigit():\n        result.append(int(item))\nprint(result)",
+      "answers": {
+        "1": "['20', '30', '40', 'vlan', 'test']",
+        "2": "[20, 30, 40, 'vlan', 'test']",
+        "3": "['20', '30', '40']",
+        "4": "[20, 30, 40]",
+        "5": "Ошибка"
+      },
+      "correct_answer": "4",
+      "multiple_choices": false
+    },
+    {
+      "description": "Что будет выведено на стандартный поток вывода? (значения, которые выводятся на разных строках, разделены запятой)",
+      "code": "num = 7\nwhile num <= 10:\n    print(num)\n    num -= 1\n\nprint(num)",
+      "answers": {
+        "1": "7, 8, 9, 10",
+        "2": "7, 8, 9",
+        "3": "7, 6, 5, 4, 3, 2, 1",
+        "4": "Ошибка",
+        "5": "Бесконечный цикл"
+      },
+      "correct_answer": "5",
+      "multiple_choices": false
+    },
+    {
+      "description": "Что будет выведено на стандартный поток вывода? (значения, которые выводятся на разных строках, разделены запятой)",
+      "code": "num = 7\nwhile num <= 10:\n    print(num)\n    num += 1\n    print(num)\n\nprint(num)",
+      "answers": {
+        "1": "7, 8, 9, 10",
+        "2": "7, 8, 9",
+        "3": "7, 6, 5, 4, 3, 2, 1",
+        "4": "7, 7, 8, 8, 9, 9, 10, 10",
+        "5": "7, 7, 8, 8, 9, 9, 10, 10, 11, 11",
+        "6": "7, 8, 8, 9, 9, 10, 10, 11, 11",
+        "7": "7, 8, 8, 9, 9, 10, 10, 11",
+        "8": "Ошибка",
+        "9": "Бесконечный цикл"
+      },
+      "correct_answer": "6",
+      "multiple_choices": false
+    },
+    {
+      "description": "Что будет выведено на стандартный поток вывода? (значения, которые выводятся на разных строках, разделены запятой)",
+      "code": "num = 7\nwhile num <= 10:\n    print(num)\n    num += 1\n    if num == 8:\n        continue\n    print(num)\n\nprint(num)",
+      "answers": {
+        "1": "7, 8, 9, 10",
+        "2": "7, 8, 9",
+        "3": "7, 7, 9, 9, 10, 10",
+        "4": "7, 7, 8, 8, 9, 9, 10, 10, 11, 11",
+        "5": "7, 9, 9, 10, 10, 11, 11",
+        "6": "7, 8, 9, 9, 10, 10, 11, 11",
+        "7": "Ошибка",
+        "8": "Бесконечный цикл"
+      },
+      "correct_answer": "6",
+      "multiple_choices": false
+    },
+    {
+      "description": "Что будет выведено на стандартный поток вывода в последней строке?",
+      "code": "sum_of_nums = 0\n\nwhile sum_of_nums < 4:\n    sum_of_nums += 1\n    for num in range(5):\n        sum_of_nums += num\n\nprint(sum_of_nums)",
+      "answers": {
+        "1": "10",
+        "2": "40",
+        "3": "3",
+        "4": "50",
+        "5": "20",
+        "6": "11",
+        "7": "0"
+      },
+      "correct_answer": "6",
+      "multiple_choices": false
+    },
+    {
+      "description": "Что будет выведено на стандартный поток вывода в последней строке?",
+      "code": "i = 0\nsum_of_nums = 0\n\nwhile i < 4:\n    i += 1\n    for num in range(5):\n        sum_of_nums += num\n\nprint(sum_of_nums)",
+      "answers": {
+        "1": "10",
+        "2": "40",
+        "3": "3",
+        "4": "50",
+        "5": "20",
+        "6": "11",
+        "7": "0"
+      },
+      "correct_answer": "2",
+      "multiple_choices": false
+    },
+    {
+      "description": "Что будет выведено на стандартный поток вывода в последней строке?",
+      "code": "i = 0\nsum_of_nums = 0\n\nwhile i < 4:\n    i += 1\n    for num in range(5):\n        sum_of_nums += num\n        if sum_of_nums > 20:\n            break\n\nprint(sum_of_nums)",
+      "answers": {
+        "1": "10",
+        "2": "40",
+        "3": "30",
+        "4": "20",
+        "5": "21",
+        "6": "22",
+        "7": "30",
+        "8": "0"
+      },
+      "correct_answer": "5",
+      "multiple_choices": false
+    },
+    {
+      "description": "Что будет выведено на стандартный поток вывода в последней строке?",
+      "code": "i = 0\nsum_of_nums = 0\n\nwhile i < 4:\n    i += 1\n    for num in range(5):\n        sum_of_nums += num\n    if sum_of_nums > 20:\n        break\n\nprint(sum_of_nums)",
+      "answers": {
+        "1": "10",
+        "2": "40",
+        "3": "30",
+        "4": "20",
+        "5": "21",
+        "6": "22",
+        "7": "30",
+        "8": "0"
+      },
+      "correct_answer": "7",
+      "multiple_choices": false
+    },
+    {
+      "description": "Что будет выведено на стандартный поток вывода в последней строке?",
+      "code": "i = 0\nsum_of_nums = 0\n\nwhile i < 4:\n    i += 1\n    for num in range(5):\n        sum_of_nums += num\n    if sum_of_nums > 20:\n        continue\n\nprint(sum_of_nums)",
+      "answers": {
+        "1": "10",
+        "2": "40",
+        "3": "30",
+        "4": "20",
+        "5": "21",
+        "6": "22",
+        "7": "30",
+        "8": "0"
+      },
+      "correct_answer": "2",
+      "multiple_choices": false
+    },
+    {
+      "description": "Что будет выведено на стандартный поток вывода в последней строке?",
+      "code": "i = 0\nsum_of_nums = 0\n\nwhile i < 4:\n    i += 1\n    if sum_of_nums > 20:\n        continue\n    for num in range(5):\n        sum_of_nums += num\n\nprint(sum_of_nums)",
+      "answers": {
+        "1": "10",
+        "2": "40",
+        "3": "30",
+        "4": "20",
+        "5": "21",
+        "6": "22",
+        "7": "30",
+        "8": "0"
+      },
+      "correct_answer": "3",
+      "multiple_choices": false
+    },
+    {
+      "description": "Что будет выведено на стандартный поток вывода в последней строке?",
+      "code": "i = 0\nsum_of_nums = 0\n\nwhile i < 4:\n    i += 1\n    for num in range(5):\n        sum_of_nums += num\n        break\n\nprint(sum_of_nums)",
+      "answers": {
+        "1": "10",
+        "2": "40",
+        "3": "30",
+        "4": "20",
+        "5": "21",
+        "6": "22",
+        "7": "30",
+        "8": "0"
+      },
+      "correct_answer": "8",
+      "multiple_choices": false
     }
   ]
 }
