@@ -404,5 +404,66 @@
       "correct_answer": ["1", "2", "3", "4"],
       "multiple_choices": true
     }
+  ],
+  "05 Создание базовых скриптов (sys.argv)": [
+    {
+      "description": "Какой тип данных будет в переменной result при вызове скрипта ниже таким образом:\n$ python script.py 100",
+      "code": "from sys import argv\nresult = argv",
+      "answers": {
+        "1": "список (list)",
+        "2": "строка (str)",
+        "3": "число (int)"
+      },
+      "correct_answer": "1",
+      "multiple_choices": false
+    },
+    {
+      "description": "Какие типы данных будут у элементов списка argv при вызове скрипта ниже таким образом:\n$ python script.py 100 test",
+      "code": "from pprint import pprint\nfrom sys import argv\npprint(argv)",
+      "answers": {
+        "1": "список (list)",
+        "2": "строка (str)",
+        "3": "число (int)"
+      },
+      "correct_answer": ["2"],
+      "multiple_choices": true
+    },
+    {
+      "description": "Какое значение будет у переменной result при вызове скрипта ниже таким образом:\n$ python script.py",
+      "code": "from sys import argv\nresult = argv[0]",
+      "answers": {
+        "1": "''",
+        "2": "Ошибка IndexError",
+        "3": "'script.py'"
+      },
+      "correct_answer": "3",
+      "multiple_choices": false
+    },
+    {
+      "description": "Какое значение будет у переменной result при вызове скрипта ниже таким образом:\n$ python script.py 100 test",
+      "code": "from sys import argv\nresult = argv[1]",
+      "answers": {
+        "1": "'test'",
+        "2": "'script.py'",
+        "3": "100",
+        "4": "'100'",
+        "5": "Ошибка IndexError"
+      },
+      "correct_answer": "4",
+      "multiple_choices": false
+    }
+  ],
+  "05 Создание базовых скриптов (input)": [
+    {
+      "description": "Какой тип данных будет в переменной result при вызове скрипта ниже таким образом:\n$ python script.py\nВведите число: 100",
+      "code": "result = input('Введите число: ')",
+      "answers": {
+        "1": "список (list)",
+        "2": "строка (str)",
+        "3": "число (int)"
+      },
+      "correct_answer": "2",
+      "multiple_choices": false
+    }
   ]
 }
