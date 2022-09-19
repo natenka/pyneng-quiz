@@ -69,11 +69,15 @@ class QuestionTable(Widget):
 
         # Answers table
         answers_table = Table(box=box.SIMPLE, min_width=50)
-        answers_table.add_column("Номер ответа", justify="center", no_wrap=True)
+        answers_table.add_column("Номер ответа", justify="center", no_wrap=True, vertical="middle")
         answers_table.add_column("Ответ", justify="left")
         for num, answer in self.current_question_dict["answers"].items():
             style = self._select_row_style(row_number=num)
-            answers_table.add_row(num, answer, style=style)
+            if self.current_question_dict.get("code_in_answer"):
+                answers_table.add_row(num, self._add_syntax_highlight(answer), style=style)
+                answers_table.add_row("")
+            else:
+                answers_table.add_row(num, answer, style=style)
 
         # Stats table
         stats_table = Table(box=None, min_width=30)
