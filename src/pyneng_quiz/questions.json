@@ -170,6 +170,70 @@
       },
       "correct_answer": ["1", "3", "4", "5", "6"],
       "multiple_choices": true
+    },
+    {
+      "description": "Какие ключи будут в переменной keys в последней строке?",
+      "code": "data = {'hostname': 'london_r1', 'ip': '10.255.0.1', 'vendor': 'Cisco'}\nkeys = data.keys()\ndel data['ip']\nprint(keys)",
+      "answers": {
+        "1": "hostname",
+        "2": "ip",
+        "3": "vendor"
+      },
+      "correct_answer": ["1", "3"],
+      "multiple_choices": true
+    },
+    {
+      "description": "Какие ключи будут в переменной keys в последней строке?",
+      "code": "data = {'hostname': 'london_r1', 'ip': '10.255.0.1', 'vendor': 'Cisco'}\nkeys = list(data.keys())\ndel data['ip']\nprint(keys)",
+      "answers": {
+        "1": "hostname",
+        "2": "ip",
+        "3": "vendor"
+      },
+      "correct_answer": ["1", "2", "3"],
+      "multiple_choices": true
+    },
+    {
+      "description": "Какие типы данных из перечисленных могут использоваться как ключ в словаре?",
+      "code": "",
+      "answers": {
+        "1": "список (list)",
+        "2": "строка (str)",
+        "3": "словарь (dict)",
+        "4": "число (int)",
+        "5": "кортеж (tuple)",
+        "6": "множество (set)"
+      },
+      "correct_answer": ["2", "4", "5"],
+      "multiple_choices": true
+    },
+    {
+      "description": "Какие типы данных из перечисленных могут использоваться как значение в словаре?",
+      "code": "",
+      "answers": {
+        "1": "список (list)",
+        "2": "строка (str)",
+        "3": "словарь (dict)",
+        "4": "число (int)",
+        "5": "кортеж (tuple)",
+        "6": "множество (set)"
+      },
+      "correct_answer": ["1", "2", "3", "4", "5", "6"],
+      "multiple_choices": true
+    },
+    {
+      "description": "Выберите все варианты в которых переменная result будет равна 10.255.0.1",
+      "code": "data = {4: 400, 1: 100, 2: 200, 3: 300}",
+      "code": "data = {\n    'r1': {'hostname': 'london_r1', 'ip': '10.255.0.1', 'vendor': 'Cisco'},\n    'r2': {'hostname': 'london_r2', 'ip': '10.255.0.2', 'vendor': 'Cisco'}\n}",
+      "answers": {
+        "1": "result = data[r1][ip]",
+        "2": "result = list(data['r1'])[1]",
+        "3": "result = data['r1'].get('ip', False)",
+        "4": "result = data['r1']['ip']",
+        "5": "result = list(data['r1'].values())[1]"
+      },
+      "correct_answer": ["3", "4", "5"],
+      "multiple_choices": true
     }
   ],
   "04 Форматирование строк": [
@@ -312,6 +376,33 @@
       },
       "correct_answer": "2",
       "multiple_choices": false
+    },
+    {
+      "description": "Какие типы данных из перечисленных изменяемые (mutable)?",
+      "code": "",
+      "answers": {
+        "1": "список (list)",
+        "2": "строка (str)",
+        "3": "словарь (dict)",
+        "4": "число (int)",
+        "5": "кортеж (tuple)",
+        "6": "множество (set)"
+      },
+      "correct_answer": ["1", "3", "6"],
+      "multiple_choices": true
+    },
+    {
+      "description": "Какие типы данных из перечисленных упорядоченные (сохраняют порядок элементов)?",
+      "code": "",
+      "answers": {
+        "1": "список (list)",
+        "2": "строка (str)",
+        "3": "словарь (dict)",
+        "4": "кортеж (tuple)",
+        "5": "множество (set)"
+      },
+      "correct_answer": ["1", "2", "3", "4"],
+      "multiple_choices": true
     }
   ]
 }
