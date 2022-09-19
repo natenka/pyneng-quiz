@@ -19,7 +19,7 @@
       "code": "string = 'interface'\nresult = string[:4]",
       "answers": {
         "1": "'t'",
-        "2": "'int'",
+        "2": "'inter'",
         "3": "'e'",
         "4": "'r'",
         "5": "'inte'",
@@ -131,7 +131,7 @@
       "multiple_choices": true
     },
     {
-      "description": "В каком выражении итоговый список result будет состоять из элементов list1 и list2?",
+      "description": "В каком выражении в переменной result будет список состоящий из элементов list1 и list2?",
       "code": "list1 = [1, 2, 3]\nlist2 = [4, 5, 6]",
       "answers": {
         "1": "result = list1 + list2",
@@ -256,7 +256,7 @@
     },
     {
       "description": "Какое значение id будет у переменной var_b?",
-      "code": "In [1]: var_a = var_b = 3500\n\nIn [2]: id(var_a)\nOut[2]: 3044598608",
+      "code": "In [1]: var_a = 3500\n\nIn [2]: var_b = var_a\n\nIn [3]: id(var_a)\nOut[2]: 3044598608",
       "answers": {
         "1": "3044598608",
         "2": "Другое"
