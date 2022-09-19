@@ -405,7 +405,7 @@
       "multiple_choices": true
     }
   ],
-  "05 Создание базовых скриптов (sys.argv)": [
+  "05 Создание базовых скриптов (input, sys.argv)": [
     {
       "description": "Какой тип данных будет в переменной result при вызове скрипта ниже таким образом:\n$ python script.py 100",
       "code": "from sys import argv\nresult = argv",
@@ -429,14 +429,15 @@
       "multiple_choices": true
     },
     {
-      "description": "Какое значение будет у переменной result при вызове скрипта ниже таким образом:\n$ python script.py",
+      "description": "Какое значение будет у переменной result при вызове скрипта ниже таким образом:\n$ python script.py test",
       "code": "from sys import argv\nresult = argv[0]",
       "answers": {
         "1": "''",
         "2": "Ошибка IndexError",
-        "3": "'script.py'"
+        "3": "'test'",
+        "4": "'script.py'"
       },
-      "correct_answer": "3",
+      "correct_answer": "4",
       "multiple_choices": false
     },
     {
@@ -451,9 +452,7 @@
       },
       "correct_answer": "4",
       "multiple_choices": false
-    }
-  ],
-  "05 Создание базовых скриптов (input)": [
+    },
     {
       "description": "Какой тип данных будет в переменной result при вызове скрипта ниже таким образом:\n$ python script.py\nВведите число: 100",
       "code": "result = input('Введите число: ')",
