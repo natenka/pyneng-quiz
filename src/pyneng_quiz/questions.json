@@ -736,17 +736,156 @@
       "description": "Что будет выведено на стандартный поток вывода в последней строке?",
       "code": "i = 0\nsum_of_nums = 0\n\nwhile i < 4:\n    i += 1\n    for num in range(5):\n        sum_of_nums += num\n        break\n\nprint(sum_of_nums)",
       "answers": {
-        "1": "10",
+        "1": "0",
         "2": "40",
         "3": "30",
         "4": "20",
         "5": "21",
         "6": "22",
-        "7": "4",
-        "8": "0"
+        "7": "4"
       },
-      "correct_answer": "8",
+      "correct_answer": "1",
       "multiple_choices": false
     }
-  ]
+  ],
+  "09 Функции": [
+    {
+      "description": "Какое значение будет в переменной result?",
+      "code": "def func1(a, b):\n    if type(a) == int:\n        return a\n    elif type(b) == int:\n        return b\n\nresult = func1(4, 3, 5)",
+      "answers": {
+        "1": "None",
+        "2": "Error",
+        "3": "4",
+        "4": "'3'",
+        "5": "10",
+        "6": "5"
+      },
+      "correct_answer": "2",
+      "multiple_choices": false
+    },
+    {
+      "description": "Какое значение будет в переменной result?",
+      "code": "def func1(a, b, c):\n    if type(a) == int:\n        return a\n        b = 10\n    elif type(b) == int:\n        return b\n\nresult = func1('a', '3', 5)",
+      "answers": {
+        "1": "None",
+        "2": "Null",
+        "3": "'a'",
+        "4": "'3'",
+        "5": "10",
+        "6": "5"
+      },
+      "correct_answer": "1",
+      "multiple_choices": false
+    },
+    {
+      "description": "Какое значение будет в переменной result?",
+      "code": "def func1(a, b, c):\n    if type(a) == int:\n        return a\n        b = 10\n    elif type(b) == int:\n        return b\n\nresult = func1(4, '3', 5)",
+      "answers": {
+        "1": "None",
+        "2": "Null",
+        "3": "4",
+        "4": "'3'",
+        "5": "10",
+        "6": "5"
+      },
+      "correct_answer": "3",
+      "multiple_choices": false
+    },
+    {
+      "description": "Какое значение будет в переменной result?",
+      "code": "c = 10\n\ndef func1(a, b):\n    if type(a) == int:\n        return c\n    elif type(b) == int:\n        return b\n\nresult = func1(4, '3', 5)",
+      "answers": {
+        "1": "None",
+        "2": "Null",
+        "3": "4",
+        "4": "'3'",
+        "5": "10",
+        "6": "5"
+      },
+      "correct_answer": "5",
+      "multiple_choices": false
+    },
+    {
+      "description": "Какое значение будет в переменной result?",
+      "code": "c = 10\n\ndef func1(a, b):\n    if type(a) == int:\n        c = 5\n        return c\n    elif type(b) == int:\n        return b\n\nresult = func1(4, 3)",
+      "answers": {
+        "1": "None",
+        "2": "Null",
+        "3": "4",
+        "4": "3",
+        "5": "10",
+        "6": "5"
+      },
+      "correct_answer": "6",
+      "multiple_choices": false
+    },
+    {
+      "description": "Какое значение будет в переменной result?",
+      "code": "def func1(var1, var2):\n    if var1:\n        return var1\n    elif var2:\n        return var2\n\ndef func2(var3, var4):\n    return func1(var3, var3 > var4)\n\nresult = func2(5, 3)",
+      "answers": {
+        "1": "None",
+        "2": "Null",
+        "3": "5",
+        "4": "3",
+        "5": "10"
+      },
+      "correct_answer": "3",
+      "multiple_choices": false
+    },
+    {
+      "description": "Какое значение будет в переменной result?",
+      "code": "def func1(var1, var2):\n    if var1:\n        return var1\n    elif var2:\n        return var2\n\ndef func2(var3, var4):\n    return func1(var3, var3 > var4)\n\nresult = func2(0, 3)",
+      "answers": {
+        "1": "None",
+        "2": "True",
+        "3": "4",
+        "4": "3",
+        "5": "False"
+      },
+      "correct_answer": "1",
+      "multiple_choices": false
+    },
+    {
+      "description": "Какое значение будет в переменной result?",
+      "code": "def func1(var1, var2):\n    if var1:\n        return var1\n    elif var2:\n        return var2\n\ndef func2(var3, var4):\n    return func1(var3, var3 > var4)\n\nresult = func2(0, -3)",
+      "answers": {
+        "1": "None",
+        "2": "False",
+        "3": "0",
+        "4": "-3",
+        "5": "True"
+      },
+      "correct_answer": "5",
+      "multiple_choices": false
+	},
+	{
+	  "description": "Какое значение будет в переменной result?",
+	  "code": "def func1(limit):\n    num_list = []\n    for i in range(limit):\n        num_list.append(i)\n    return num_list\n\ndef func2(num):\n    item_list = []\n    for i in func1(5):\n        item_list.append(i * num)\n    return item_list\n\nresult = func2(2)",
+	  "answers": {
+		"1": "[]",
+		"2": "[0, 1, 2, 3, 4]",
+		"3": "[0, 2, 4, 6, 8]",
+		"4": "[2, 4, 6, 8, 10]",
+		"5": "[1, 2, 3, 4, 5]",
+		"6": "[0]",
+		"7": "[2]"
+	  },
+	  "correct_answer": "3",
+	  "multiple_choices": false
+    },
+	{
+	  "description": "9. Какое значение будет в переменной result?",
+	  "code": "def func1(limit):\n    num_list = []\n    for i in range(limit):\n        num_list.append(i)\n        return num_list\n\ndef func2(num):\n    item_list = []\n    for i in func1(5):\n        item_list.append(i * num)\n    return item_list\n\nresult = func2(2)",
+	  "answers": {
+		"1": "[]",
+		"2": "[0, 1, 2, 3, 4]",
+		"3": "[0, 2, 4, 6, 8]",
+		"4": "[2, 4, 6, 8, 10]",
+		"5": "[1, 2, 3, 4, 5]",
+		"6": "[0]",
+		"7": "[2]"
+	  },
+	  "correct_answer": "6",
+	  "multiple_choices": false
+    }
 }
