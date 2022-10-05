@@ -754,7 +754,7 @@
       "code": "def func1(a, b):\n    if type(a) == int:\n        return a\n    elif type(b) == int:\n        return b\n\nresult = func1(4, 3, 5)",
       "answers": {
         "1": "None",
-        "2": "Error",
+        "2": "Ошибка",
         "3": "4",
         "4": "'3'",
         "5": "10",
@@ -819,6 +819,82 @@
       "correct_answer": "6",
       "multiple_choices": false
     },
+	{
+	  "description": "Какое значение будет в переменной result?",
+	  "code": "def func1(limit, skip=True):\n    num_list = []\n    for i in range(limit):\n        if skip and i % 2 == 0: # остаток от деления\n            pass\n        else:\n            num_list.append(i)\n    return num_list\n\nresult = func1(8)",
+	  "answers": {
+		"1": "[]",
+		"2": "[0, 2, 4, 6, 8]",
+		"3": "[0, 2, 4, 6]",
+		"4": "[1, 3, 6, 7]",
+		"5": "[0, 1, 2, 3, 4, 5, 6, 7]",
+		"6": "[1, 2, 3, 4, 5, 6, 7, 8]",
+        "7": "Ошибка"
+	  },
+	  "correct_answer": "4",
+	  "multiple_choices": false
+    },
+	{
+	  "description": "Какое значение будет в переменной result?",
+	  "code": "def func1(limit, skip=True):\n    num_list = []\n    for i in range(limit):\n        if skip and i % 2 == 0: # остаток от деления\n            pass\n        else:\n            num_list.append(i)\n    return num_list\n\nresult = func1(8, False)",
+	  "answers": {
+		"1": "[]",
+		"2": "[0, 2, 4, 6, 8]",
+		"3": "[0, 2, 4, 6]",
+		"4": "[1, 3, 6, 7]",
+		"5": "[0, 1, 2, 3, 4, 5, 6, 7]",
+		"6": "[1, 2, 3, 4, 5, 6, 7, 8]",
+        "7": "Ошибка"
+	  },
+	  "correct_answer": "5",
+	  "multiple_choices": false
+    },
+	{
+	  "description": "Какое значение будет в переменной result?",
+	  "code": "def func1(limit, skip=True):\n    num_list = []\n    for i in range(limit):\n        if skip and i % 2 == 0: # остаток от деления\n            pass\n        else:\n            num_list.append(i)\n    return num_list\n\nresult = func1(skip=True, limit=4)",
+	  "answers": {
+		"1": "[]",
+		"2": "[0, 2, 4, 6, 8]",
+		"3": "[0, 2, 4, 6]",
+		"4": "[1, 3, 5, 7]",
+		"5": "[1, 3]",
+        "6": "Ошибка"
+	  },
+	  "correct_answer": "5",
+	  "multiple_choices": false
+    },
+	{
+	  "description": "Какое значение будет в переменной result?",
+	  "code": "def func1(limit, skip=True):\n    num_list = []\n    for i in range(1, limit):\n        if skip and i % 2 == 0: # остаток от деления\n            return num_list\n        else:\n            num_list.append(i)\n    return num_list\n\nresult = func1(8)",
+	  "answers": {
+		"1": "[]",
+		"2": "[0, 2, 4, 6, 8]",
+		"3": "[0, 2, 4, 6]",
+		"4": "[1, 3, 5, 7]",
+		"5": "[1, 3]",
+		"6": "[1]",
+        "7": "Ошибка"
+	  },
+	  "correct_answer": "6",
+	  "multiple_choices": false
+    },
+	{
+	  "description": "Какое значение будет в переменной result?",
+	  "code": "def func1(limit, skip=True):\n    num_list = []\n    for i in range(limit):\n        num_list.append(i)\n    return num_list\n\nresult = func1(limit=8, True)",
+	  "answers": {
+		"1": "[]",
+		"2": "[0, 2, 4, 6, 8]",
+		"3": "[0, 2, 4, 6]",
+		"4": "[1, 3, 5, 7]",
+		"5": "[1, 3]",
+		"6": "[1]",
+        "7": "Ошибка"
+	  },
+	  "correct_answer": "7",
+	  "multiple_choices": false
+    }
+  ],
+  "09 Функции. Продолжение": [
     {
       "description": "Какое значение будет в переменной result?",
       "code": "def func1(var1, var2):\n    if var1:\n        return var1\n    elif var2:\n        return var2\n\ndef func2(var3, var4):\n    return func1(var3, var3 > var4)\n\nresult = func2(5, 3)",
@@ -874,7 +950,7 @@
 	  "multiple_choices": false
     },
 	{
-	  "description": "9. Какое значение будет в переменной result?",
+	  "description": "Какое значение будет в переменной result?",
 	  "code": "def func1(limit):\n    num_list = []\n    for i in range(limit):\n        num_list.append(i)\n        return num_list\n\ndef func2(num):\n    item_list = []\n    for i in func1(5):\n        item_list.append(i * num)\n    return item_list\n\nresult = func2(2)",
 	  "answers": {
 		"1": "[]",
@@ -887,5 +963,22 @@
 	  },
 	  "correct_answer": "6",
 	  "multiple_choices": false
+    },
+	{
+	  "description": "Какое значение будет в переменной result?",
+	  "code": "def func1(limit):\n    num_list = []\n    for i in range(1, limit):\n        num_list.append(i)\n    return num_list\n\ndef func2(num):\n    item_list = []\n    for i in func1(5):\n        item_list.append(i * num)\n        return item_list\n\nresult = func2(2)",
+	  "answers": {
+		"1": "[]",
+		"2": "[0]",
+		"3": "[0, 1, 2, 3, 4]",
+		"4": "[2]",
+		"5": "[0, 2, 4, 6, 8]",
+		"6": "[2, 4, 6, 8, 10]",
+		"7": "[1, 2, 3, 4, 5]",
+        "8": "Ошибка"
+	  },
+	  "correct_answer": "4",
+	  "multiple_choices": false
     }
+  ]
 }
