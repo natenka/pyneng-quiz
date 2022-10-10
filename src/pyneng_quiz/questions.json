@@ -793,7 +793,7 @@
     },
     {
       "description": "Какое значение будет в переменной result?",
-      "code": "c = 10\n\ndef func1(a, b):\n    if type(a) == int:\n        return c\n    elif type(b) == int:\n        return b\n\nresult = func1(4, '3', 5)",
+      "code": "c = 10\n\ndef func1(a, b):\n    if type(a) == int:\n        return c\n    elif type(b) == int:\n        return b\n\nresult = func1(4, '3')",
       "answers": {
         "1": "None",
         "2": "Null",
