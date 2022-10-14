@@ -980,5 +980,49 @@
 	  "correct_answer": "4",
 	  "multiple_choices": false
     }
+  ],
+  "11 Модули": [
+    {
+      "description": "Какие варианты импорта правильные?",
+      "code": "",
+      "answers": {
+        "1": "from module import function",
+        "2": "from module.py import function",
+        "3": "import module.py",
+        "4": "import module",
+        "5": "from module import function as func",
+        "6": "import module as md"
+      },
+      "correct_answer": ["1", "4", "5", "6"],
+      "multiple_choices": true
+    },
+    {
+      "description": "Что будет выведено на стандартный поток вывода при вызове скрипта script2.py? (значения, которые выводятся на разных строках, разделены запятой)",
+      "code": "# script1.py\n\ndef func1(num1, num2):\n    return num1 + num2\n\nprint(func1(5, 2))\n\n# script2.py\nfrom script1 import func1\n\nprint(func1(10, 1))",
+      "answers": {
+        "1": "7",
+        "2": "11",
+        "3": "7, 11",
+        "4": "Ошибка",
+        "5": "11",
+        "6": "11, 7"
+      },
+      "correct_answer": "3",
+      "multiple_choices": false
+    },
+    {
+      "description": "Что будет выведено на стандартный поток вывода при вызове скрипта script2.py? (значения, которые выводятся на разных строках, разделены запятой)",
+      "code": "##### script1.py\n\ndef func1(num1, num2):\n    return num1 + num2\n\nif __name__ == '__main__':\n    print(func1(5, 2))\n\n##### script2.py\nfrom script1 import func1\n\nif __name__ == '__main__':\n    print(func1(10, 1))",
+      "answers": {
+        "1": "7",
+        "2": "11",
+        "3": "7, 11",
+        "4": "Ошибка",
+        "5": "11",
+        "6": "11, 7"
+      },
+      "correct_answer": "2",
+      "multiple_choices": false
+    }
   ]
 }
