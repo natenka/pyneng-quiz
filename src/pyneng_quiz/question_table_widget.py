@@ -137,7 +137,7 @@ class QuestionTable(Widget):
         enter_number_prompt = f"Введите номер ответа и нажмите Enter:"
         if self.check_answer:
             enter_number_prompt = (
-                f"Введите номер ответа и нажмите Enter: {', '.join(list(self.check_answer))} "
+                f"Введите номер ответа и нажмите Enter: {', '.join(sorted(set(self.check_answer)))} "
             )
             self.check_answer = sorted(set(self.check_answer))
             if self.check_answer == q_correct_answer:
