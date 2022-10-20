@@ -103,16 +103,22 @@ class QuestionTable(Widget):
         self.reset_status()
         return Padding(q_table, 3)
 
-    def _select_row_style(self, row_number):
+    def _get_correct_answers(self):
         q_correct_answer = self.current_question_dict["correct_answer"]
-        q_correct_answer = sorted(q_correct_answer)
+        if isinstance(q_correct_answer, str):
+            q_correct_answer = [q_correct_answer]
+        q_correct_answer = sorted(set(q_correct_answer))
+        return q_correct_answer
+
+    def _select_row_style(self, row_number):
+        q_correct_answer = self._get_correct_answers()
         style = None
         if self.selected_answer and row_number in self.selected_answer:
             style = "black on white"
         elif self.show_answer and row_number in q_correct_answer:
             style = "black on green"
         elif self.check_answer:
-            self.check_answer = sorted(self.check_answer)
+            self.check_answer = sorted(set(self.check_answer))
             if row_number in self.check_answer:
                 if row_number in q_correct_answer:
                     style = "black on green"
@@ -121,8 +127,7 @@ class QuestionTable(Widget):
         return style
 
     def _format_enter_number_prompt(self):
-        q_correct_answer = self.current_question_dict["correct_answer"]
-        q_correct_answer = sorted(q_correct_answer)
+        q_correct_answer = self._get_correct_answers()
         if self.show_answer:
             enter_number_prompt = (
                 f"Номер правильного ответа: {', '.join(q_correct_answer)}"
@@ -134,7 +139,7 @@ class QuestionTable(Widget):
             enter_number_prompt = (
                 f"Введите номер ответа и нажмите Enter: {', '.join(list(self.check_answer))} "
             )
-            self.check_answer = sorted(self.check_answer)
+            self.check_answer = sorted(set(self.check_answer))
             if self.check_answer == q_correct_answer:
                 enter_number_prompt += "[black on green]правильный ответ"
                 self.all_stats[self.current_question_number] = True
