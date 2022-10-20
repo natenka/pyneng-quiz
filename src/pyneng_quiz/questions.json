@@ -223,7 +223,6 @@
     },
     {
       "description": "Выберите все варианты в которых переменная result будет равна 10.255.0.1",
-      "code": "data = {4: 400, 1: 100, 2: 200, 3: 300}",
       "code": "data = {\n    'r1': {'hostname': 'london_r1', 'ip': '10.255.0.1', 'vendor': 'Cisco'},\n    'r2': {'hostname': 'london_r2', 'ip': '10.255.0.2', 'vendor': 'Cisco'}\n}",
       "answers": {
         "1": "result = data[r1][ip]",
@@ -1020,6 +1019,266 @@
         "5": "11, 7"
       },
       "correct_answer": "2",
+      "multiple_choices": false
+    }
+  ],
+  "15 Регулярные выражения": [
+    {
+      "description": "Выберите все значения строки line, при которых будет найдено совпадение с регулярным выражением",
+      "code": "m = re.search(r'ab+a', line)",
+      "answers": {
+        "1": "line = 'abababaaba'",
+        "2": "line = 'ab'",
+        "3": "line = 'abbb'",
+        "4": "line = 'abbbabbb'",
+        "5": "line = 'aabab'",
+        "6": "line = 'aaaaa'"
+      },
+      "code_in_answer": true,
+      "correct_answer": ["1", "4", "5"],
+      "multiple_choices": true
+    },
+    {
+      "description": "Выберите все значения строки line, при которых будет найдено совпадение с регулярным выражением",
+      "code": "m = re.search(r'ab*a', line)",
+      "answers": {
+        "1": "line = 'abababaaba'",
+        "2": "line = 'ab'",
+        "3": "line = 'abbb'",
+        "4": "line = 'abbbabbb'",
+        "5": "line = 'aabab'",
+        "6": "line = 'aaaaa'"
+      },
+      "code_in_answer": true,
+      "correct_answer": ["1", "4", "5", "6"],
+      "multiple_choices": true
+    },
+    {
+      "description": "Выберите все значения строки line, при которых будет найдено совпадение с регулярным выражением",
+      "code": "m = re.search(r'[abc]+', line)",
+      "answers": {
+        "1": "line = 'abababaaba'",
+        "2": "line = 'ab'",
+        "3": "line = 'abbb'",
+        "4": "line = 'abbbabbb'",
+        "5": "line = 'aabab'",
+        "6": "line = 'aaaaa'",
+        "7": "line = 'ac'"
+      },
+      "code_in_answer": true,
+      "correct_answer": ["1", "2", "3", "4", "5", "6", "7"],
+      "multiple_choices": true
+    },
+    {
+      "description": "Выберите все значения строки line, при которых будет найдено совпадение с регулярным выражением",
+      "code": "m = re.search(r'a.[b-d]+', line)",
+      "answers": {
+        "1": "line = 'abababaaba'",
+        "2": "line = 'ab'",
+        "3": "line = 'abbb'",
+        "4": "line = 'abbbabbb'",
+        "5": "line = 'aabab'",
+        "6": "line = 'aaaaa'",
+        "7": "line = 'ac'"
+      },
+      "code_in_answer": true,
+      "correct_answer": ["1", "3", "4", "5"],
+      "multiple_choices": true
+    },
+    {
+      "description": "Выберите все значения строки line, при которых будет найдено совпадение с регулярным выражением",
+      "code": "m = re.search(r'^a.[^b-d]+', line)",
+      "answers": {
+        "1": "line = 'abababaaba'",
+        "2": "line = 'ab'",
+        "3": "line = 'abbb'",
+        "4": "line = 'abbbabbb'",
+        "5": "line = 'aabab'",
+        "6": "line = 'aaaaa'",
+        "7": "line = 'ac'"
+      },
+      "code_in_answer": true,
+      "correct_answer": ["1", "6"],
+      "multiple_choices": true
+    },
+    {
+      "description": "Выберите все значения строки line, при которых будет найдено совпадение с регулярным выражением",
+      "code": "m = re.search(r'^a.[b-d]+$', line)",
+      "answers": {
+        "1": "line = 'abababaaba'",
+        "2": "line = 'abc'",
+        "3": "line = 'abbb'",
+        "4": "line = 'abbbabbb'",
+        "5": "line = 'aabab'",
+        "6": "line = 'aaaaa'",
+        "7": "line = 'acb'"
+      },
+      "code_in_answer": true,
+      "correct_answer": ["2", "3", "7"],
+      "multiple_choices": true
+    },
+    {
+      "description": "Выберите все значения строки line, при которых будет найдено совпадение с регулярным выражением",
+      "code": "m = re.search(r'(ab|ac)', line)",
+      "answers": {
+        "1": "line = 'abababaaba'",
+        "2": "line = 'abc'",
+        "3": "line = 'abbb'",
+        "4": "line = 'abbbabbb'",
+        "5": "line = 'aabab'",
+        "6": "line = 'aaaaa'",
+        "7": "line = 'acb'"
+      },
+      "code_in_answer": true,
+      "correct_answer": ["1", "2", "3", "4", "5", "7"],
+      "multiple_choices": true
+    },
+    {
+      "description": "Выберите все значения строки line, при которых будет найдено совпадение с регулярным выражением",
+      "code": "m = re.search(r'a?b+c*', line)",
+      "answers": {
+        "1": "line = 'abababaaba'",
+        "2": "line = 'cba'",
+        "3": "line = 'accc'",
+        "4": "line = 'abbbabbb'",
+        "5": "line = 'aabab'",
+        "6": "line = 'aaaaa'",
+        "7": "line = 'acb'"
+      },
+      "code_in_answer": true,
+      "correct_answer": ["1", "2", "4", "5", "7"],
+      "multiple_choices": true
+    },
+    {
+      "description": "Выберите все значения строки line, при которых будет найдено совпадение с регулярным выражением",
+      "code": "m = re.search(r'a{2}b{2,3}c{3,}', line)",
+      "answers": {
+        "1": "line = 'abababaaba'",
+        "2": "line = 'ccccbbbaaa'",
+        "3": "line = 'aabccc'",
+        "4": "line = 'abbbabbb'",
+        "5": "line = 'aaabbbcccc'",
+        "6": "line = 'abbccc'",
+        "7": "line = 'abc'"
+      },
+      "code_in_answer": true,
+      "correct_answer": ["5"],
+      "multiple_choices": true
+    },
+    {
+      "description": "Выберите все значения строки line, при которых будет найдено совпадение с регулярным выражением",
+      "code": "m = re.search(r'\w\D+\S+\d', line)",
+      "answers": {
+        "1": "line = '44w5'",
+        "2": "line = 'abc-_3'",
+        "3": "line = 'a56c5-56'",
+        "4": "line = 'a56c5-5b6'",
+        "5": "line = 'a56c56'",
+        "6": "line = 'a36c'",
+        "7": "line = 'ab3cd6'"
+      },
+      "code_in_answer": true,
+      "correct_answer": ["2", "3", "4", "5", "7"],
+      "multiple_choices": true
+    }
+  ],
+  "15 Регулярные выражения. Продолжение": [
+    {
+      "description": "Какое значение будет в переменной result?",
+      "code": "line = '100   aabb.cc10.7000    DYNAMIC      Gi0/1'\nm = re.search(r'(\d+).+(\S+)', line)\nresult = m.groups()",
+      "answers": {
+        "1": "('100', '1')",
+        "2": "('100', 'aabb.cc10.7000')",
+        "3": "'100   aabb.cc10.7000    DYNAMIC      Gi0/1'",
+        "4": "None",
+        "5": "'100 1'",
+        "6": "('100', 'a')"
+      },
+      "correct_answer": "1",
+      "multiple_choices": false
+    },
+    {
+      "description": "Какое значение будет в переменной result?",
+      "code": "line = '100   aabb.cc10.7000    DYNAMIC      Gi0/1'\nm = re.search(r'(\\d+).+?(\\S+)', line)\nresult = m.groups()",
+      "answers": {
+        "1": "('100', '1')",
+        "2": "('100', 'aabb.cc10.7000')",
+        "3": "'100   aabb.cc10.7000    DYNAMIC      Gi0/1'",
+        "4": "None",
+        "5": "'100 1'",
+        "6": "('100', 'a')"
+      },
+      "correct_answer": "2",
+      "multiple_choices": false
+    },
+    {
+      "description": "Какое значение будет в переменной result?",
+      "code": "line = '100   aabb.cc10.7000    DYNAMIC      Gi0/1'\nm = re.search(r'(\d+) +[a-f0-9.] +', line)\nif m:\n    result = m.groups()\nelse:\n    result = None",
+      "answers": {
+        "1": "('100', '1')",
+        "2": "('100', 'aabb.cc10.7000')",
+        "3": "'100   aabb.cc10.7000    DYNAMIC      Gi0/1'",
+        "4": "None",
+        "5": "'100 1'",
+        "6": "('100', 'a')"
+      },
+      "correct_answer": "4",
+      "multiple_choices": false
+    },
+    {
+      "description": "Какое значение будет в переменной result?",
+      "code": "line = '100   aabb.cc10.7000    DYNAMIC      Gi0/1'\nm = re.search(r'(\d+) +([a-f0-9.]+) +\w+ +\S+', line)\nif m:\n    result = m.groups()\nelse:\n    result = None",
+      "answers": {
+        "1": "('100', '0')",
+        "2": "('100', 'aabb.cc10.7000')",
+        "3": "'100   aabb.cc10.7000    DYNAMIC      Gi0/1'",
+        "4": "None",
+        "5": "'100 1'",
+        "6": "('100', 'a')"
+      },
+      "correct_answer": "2",
+      "multiple_choices": false
+    },
+    {
+      "description": "Какое значение будет в переменной result?",
+      "code": "line = '100   aabb.cc10.7000    DYNAMIC      Gi0/1'\nm = re.search(r'(\d+) +([a-f0-9.])+ +\w+ +\S+', line)\nif m:\n    result = m.groups()\nelse:\n    result = None",
+      "answers": {
+        "1": "('100', '0')",
+        "2": "('100', 'aabb.cc10.7000')",
+        "3": "'100   aabb.cc10.7000    DYNAMIC      Gi0/1'",
+        "4": "None",
+        "5": "'100 1'",
+        "6": "('100', 'a')"
+      },
+      "correct_answer": "1",
+      "multiple_choices": false
+    },
+    {
+      "description": "Какое значение будет в переменной result?",
+      "code": "line = '100   aabb.cc10.7000    DYNAMIC      Gi0/1'\nm = re.search(r'(\w\w\w\w\.)+', line)\nif m:\n    result = m.groups()\nelse:\n    result = None",
+      "answers": {
+        "1": "('100',)",
+        "2": "('aabb.cc10.',)",
+        "3": "('cc10.',)",
+        "4": "('aabb.',)",
+        "5": "None",
+        "6": "('aabb.cc10.7000',)"
+      },
+      "correct_answer": "3",
+      "multiple_choices": false
+    },
+    {
+      "description": "Какое значение будет в переменной result?",
+      "code": "line = '100   aabb.cc10.7000    DYNAMIC      Gi0/1'\n\nm = re.search(r'(?P<vlan>\d)+ +(?P<mac>\S+) +\w+ +(?P<port>\S+)', line)\nresult = m.groupdict()",
+      "answers": {
+        "1": "{'vlan': '0', 'mac': 'aabb.cc10.7000', 'port': 'Gi0/1'}",
+        "2": "{'vlan': '100', 'mac': 'aabb.cc10.7000', 'port': 'Gi0/1'}",
+        "3": "('0', 'aabb.cc10.7000', 'Gi0/1')",
+        "4": "('100', 'aabb.cc10.7000', 'Gi0/1')",
+        "5": "None",
+        "7": "'100   aabb.cc10.7000    DYNAMIC      Gi0/1'"
+      },
+      "correct_answer": "1",
       "multiple_choices": false
     }
   ]
